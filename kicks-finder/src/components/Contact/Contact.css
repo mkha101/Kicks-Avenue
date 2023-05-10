@@ -1,0 +1,36 @@
+.contact {
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.contact span {
+  color: rgb(255, 255, 255);
+}
+
+.contact .wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .wrapper .mail input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.contact .wrapper .mail button {
+  padding: 10px;
+  color: rgb(60, 57, 57);
+  background: #faf9f6;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.contact .icons {
+  display: flex;
+  gap: 10px;
+}
