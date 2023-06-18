@@ -5,12 +5,18 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+
 import "./Navbar.css";
 import { Cart } from "../Cart/Cart";
 import { useSelector } from "react-redux";
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <div className="navbar">
@@ -79,6 +85,38 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
+
+        {/* Hamburger selector */}
+        <div
+          className="hamburger"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <MenuIcon />
+        </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="mobile-menu">
+            <Link className="link" to="/" onClick={closeMobileMenu}>
+              {" "}
+              Home
+            </Link>
+
+            <Link className="link" to="/products/1" onClick={closeMobileMenu}>
+              Men
+            </Link>
+            <Link className="link" to="/products/1" onClick={closeMobileMenu}>
+              Women
+            </Link>
+            <Link className="link" to="/products/1" onClick={closeMobileMenu}>
+              Children
+            </Link>
+            <div className="cartIcon" onClick={() => setOpen(!open)}>
+              <ShoppingCartOutlinedIcon />
+              <span>{products.length}</span>
+            </div>
+          </div>
+        )}
       </div>
       {open && <Cart />}
     </div>

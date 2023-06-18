@@ -34,3 +34,20 @@
   display: flex;
   gap: 10px;
 }
+
+@media (max-width: 768px) {
+  .contact {
+  }
+
+  .contact .wrapper {
+    margin-right: 50vw;
+  }
+
+  .contact .wrapper span {
+    font-size: smaller;
+  }
+
+  .contact .icons {
+    margin-top: 10vh;
+  }
+}

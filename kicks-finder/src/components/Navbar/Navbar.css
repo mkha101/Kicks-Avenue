@@ -54,3 +54,26 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+
+  .left {
+    display: none; /* Hide the left div on mobile */
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .cartIcon {
+    margin-left: 2vw;
+  }
+}

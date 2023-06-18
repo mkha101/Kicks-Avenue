@@ -13,7 +13,7 @@
   align-items: flex-start;
 }
 h1 {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
   color: #555;
 }
@@ -26,7 +26,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 5vh;
 }
 .footer .left {
   display: flex;
@@ -35,13 +35,41 @@ span {
 .footer .left .logo {
   color: 2879fe;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .footer .left .copyright {
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 0.7rem;
   color: gray;
 }
 .footer .right img {
   height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin: 50px 20px;
+  }
+
+  .footer .top {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer .top .item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+  }
+
+  .footer .left {
+    margin-bottom: 10px;
+  }
 }
